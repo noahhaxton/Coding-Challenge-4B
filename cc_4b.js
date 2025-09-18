@@ -3,7 +3,7 @@ const products = [
     { sku: "B-200", name: "Laptop", category: "electronics", price: 600.00, inventory: 5 },
     { sku: "C-300", name: "Shirt", category: "apparel", price: 10.00, inventory: 10 },
     { sku: "D-400", name: "Bleach", category: "household", price: 5.00, inventory: 15 },
-    { sku: "E-500", name: "Pizza", category: "groceries", price: 5.00, inventory: 20 },
+    { sku: "E-500", name: "Onion", category: "groceries", price: 1.00, inventory: 30 },
 ];
 
 for (let products of products) {
@@ -11,6 +11,9 @@ for (let products of products) {
     switch (product.category) {
         case "electronics":
             discount = .2
+            break;
+        case "fastFood":
+            discount = .3
             break;
         case "groceries":
         case "household":
@@ -20,5 +23,5 @@ for (let products of products) {
                 discount = 0;
                 break;
     }
- // Place the promoPrice integration here
-}
+    // Place the promoPrice integration here
+    let promoPrice = product.price * (1-discount)
