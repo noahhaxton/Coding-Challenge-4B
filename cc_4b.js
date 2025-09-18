@@ -25,3 +25,17 @@ for (let products of products) {
     }
     // Place the promoPrice integration here
     let promoPrice = product.price * (1-discount)
+    product.promoPrice = promoPrice
+}
+    const customers = [
+        {
+            id: 1, customerType: "regular", couponCode: "SAVE10", taxRate: 0.085,
+            cart: [{ sku: "A-100", qty:1 }, { sku: "G-300", qty: 3}] },
+            id: 2, customerType: "regular", couponCode: "SAVE10", taxRate: 0.085,
+            cart: [{ sku: "B-200", qty:1 }, { sku: "G-300", qty: 3}] },
+            id: 3, customerType: "regular", couponCode: "SAVE10", taxRate: 0.085,
+            cart: [{ sku: "C-300", qty:1 }, { sku: "G-300", qty: 3}] },
+            id: 4, customerType: "regular", couponCode: "SAVE10", taxRate: 0.085,
+            cart: [{ sku: "D-400", qty:1 }, { sku: "G-300", qty: 3}] },
+        }
+    ]
